@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage3.master.cs" Inherits="MasterPage3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <style>
+ul {
+  list-style-type: none;
+  
+  margin-top:-10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+ 
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color:white;
+  text-align: center;
+  padding: 16px 14px;
+
+
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #660066;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;
+                           color:#660066;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+   
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <ul>
+            <li><a>Intelligent Trade System</a></li>
+ 
+  <li class="dropdown">
+    <a  class="dropbtn">Market News</a>
+    <div class="dropdown-content">
+      <a href="index.aspx">Market Overview</a>
+      <a href="#">Real-Time News</a>
+      <a href="#">Forecasts</a>
+        <a href="#">Market Outslook</a>
+    </div>
+  </li> <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Strategies Overview</a>
+      <a href="#">Sentiments</a>
+      <a href="#">Analysit Picks</a>
+      <a href="#">Support and Resistance</a>
+      <a href="#">Piovt Points</a>
+
+    </div>
+  </li> <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Market Data</a>
+    <div class="dropdown-content">
+      <a href="#">Live Chart</a>
+      <a href="#">Rates</a>
+    </div>
+  </li> <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Calenders</a>
+    <div class="dropdown-content">
+      <a href="#">Economic Calender</a>
+      <a href="#">Central Bank Calender</a>
+    
+    </div>
+  </li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About Us</a>
+    <div class="dropdown-content">
+      <a href="#">Authors</a>
+      <a href= "inquries.aspx" >Inquries</a>
+        <a href="inquries.aspx">Inquries</a>
+    </div>
+  </li>
+             <li style="float:right"><a class="active" href="signup.aspx">Sign Up</a></li>
+             <li style="float:right"><a class="active" href="login.aspx">Login</a></li>
+             <li style="float:right"><a class="active" href="signinAdminUserSide.aspx">Admin Login</a></li>
+
+</ul>
+   
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
